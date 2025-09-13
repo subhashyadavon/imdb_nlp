@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMDB Sentiment Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>IMDB Sentiment Classifier</h1>
+        <form method="POST">
+            <textarea name="review" placeholder="Type your movie review here...">{{ review }}</textarea><br>
+            <button type="submit">Predict Sentiment</button>
+        </form>
+
+        {% if sentiment %}
+            <div class="result {{ 'positive' if sentiment=='Positive' else 'negative' }}">
+                Sentiment: {{ sentiment }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
