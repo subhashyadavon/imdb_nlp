@@ -14,20 +14,38 @@ The project also showcases **NLP concepts and preprocessing techniques** used in
 - Displays the result interactively.
 
 ---
+## **How to Run the App**
 
-## **Virtual Environment**
+Follow these steps to set up and run the project locally.
 
-- This project uses a Python virtual environment to manage dependencies.  
-- Make sure to **activate your virtual environment** before running the app:
-
+### 1. Clone the Repository
 ```bash
-# On Mac/Linux
+git clone https://github.com/subhashyadavon/imdb_nlp.git
+cd imdb_nlp
+```
+
+### 2. Create a Virtual Environment
+```bash
+python3 -m venv sentiment-analysis
+```
+### 3. Activate the Virtual Environment
+```bash
+# On macOS/Linux
 source sentiment-analysis/bin/activate
-
-
-
 # On Windows
 sentiment-analysis\Scripts\activate
+```
+### 4. Install Dependencies
+```bash
+python3 sentiment_analysis.py
+```
+
+### 5. Run the flask app
+```bash
+python3 app.py
+```
+
+
 
 
 
