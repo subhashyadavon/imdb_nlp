@@ -1,0 +1,6 @@
+# Model files
+model/
+# Python cache and bytecode
+__pycache__/
+# Virtual environments
+sentiment-analysis/
