@@ -1,22 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>IMDB Sentiment Classifier</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB Sentiment - AI Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <div class="container">
-        <h1>IMDB Sentiment Classifier</h1>
-        <form method="POST">
-            <textarea name="review" placeholder="Type your movie review here...">{{ review }}</textarea><br>
-            <button type="submit">Predict Sentiment</button>
-        </form>
 
-        {% if sentiment %}
-            <div class="result {{ 'positive' if sentiment=='Positive' else 'negative' }}">
-                Sentiment: {{ sentiment }}
+<body>
+    <div class="overlay"></div>
+    <main class="container">
+        <header>
+            <h1>IMDB <span class="accent">Sentiment</span> Analysis</h1>
+            <p class="subtitle">AI-powered movie review classification</p>
+        </header>
+
+        <section class="glass-panel">
+            <form method="POST" id="predictForm">
+                <div class="input-group">
+                    <label for="review">Movie Review</label>
+                    <textarea name="review" id="review" placeholder="Share your thoughts on the movie..."
+                        required>{{ review }}</textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <span class="btn-text">Predict Sentiment</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+
+            {% if sentiment %}
+            <div class="result-container animate-fade-in">
+                <div class="result-label">Analysis Result:</div>
+                <div class="result {{ 'positive' if sentiment=='Positive' else 'negative' }}">
+                    <span class="icon">{{ '✨' if sentiment=='Positive' else '🎬' }}</span>
+                    <span class="status">{{ sentiment }}</span>
+                </div>
             </div>
-        {% endif %}
-    </div>
+            {% endif %}
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Subhash Yadav. Engineering Intelligent Systems.</p>
+        </footer>
+    </main>
 </body>
+
 </html>

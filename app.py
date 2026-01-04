@@ -64,5 +64,6 @@ def index():
         sentiment = "Positive" if pred == 1 else "Negative"
     return render_template("index.html", sentiment=sentiment, review=review)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True, port=5001)
+
