@@ -2,7 +2,7 @@ aiohappyeyeballs==2.6.1
 aiohttp==3.13.1
 aiosignal==1.4.0
 altair==5.5.0
-altgraph @ file:///AppleInternal/Library/BuildRoots/39d9dc1a-2111-11f0-be06-226177e5bb69/Library/Caches/com.apple.xbs/Sources/python3/altgraph-0.17.2-py2.py3-none-any.whl
+
 annotated-types==0.7.0
 anyascii==0.3.3
 anyio==4.11.0
@@ -28,7 +28,7 @@ filelock==3.19.1
 Flask==3.1.2
 frozenlist==1.8.0
 fsspec==2025.9.0
-future @ file:///AppleInternal/Library/BuildRoots/39d9dc1a-2111-11f0-be06-226177e5bb69/Library/Caches/com.apple.xbs/Sources/python3/future-0.18.2-py3-none-any.whl
+future==0.18.2
 gitdb==4.0.12
 GitPython==3.1.44
 google-ai-generativelanguage==0.6.15
@@ -55,7 +55,7 @@ jsonschema==4.23.0
 jsonschema-specifications==2025.4.1
 langcodes==3.5.0
 language_data==1.3.0
-macholib @ file:///AppleInternal/Library/BuildRoots/39d9dc1a-2111-11f0-be06-226177e5bb69/Library/Caches/com.apple.xbs/Sources/python3/macholib-1.15.2-py2.py3-none-any.whl
+
 marisa-trie==1.3.1
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
@@ -97,7 +97,7 @@ rsa==4.9.1
 scikit-learn==1.6.1
 scipy==1.13.1
 shellingham==1.5.4
-six @ file:///AppleInternal/Library/BuildRoots/39d9dc1a-2111-11f0-be06-226177e5bb69/Library/Caches/com.apple.xbs/Sources/python3/six-1.15.0-py2.py3-none-any.whl
+six==1.15.0
 smart_open==7.4.1
 smmap==5.0.2
 sniffio==1.3.1
