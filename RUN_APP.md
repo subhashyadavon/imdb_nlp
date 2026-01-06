@@ -20,10 +20,10 @@ After pushing your code, you can verify the image was built:
 You can pull the built image from anywhere (assuming you have access or it's public):
 
 ```bash
-docker pull ghcr.io/YOUR_GITHUB_USERNAME/imdb-nlp:latest
+docker pull ghcr.io/subhashyadavon/imdb-nlp:latest
 ```
 
 ### 3. Running the Pulled Image
 ```bash
-docker run -p 5001:8080 ghcr.io/YOUR_GITHUB_USERNAME/imdb-nlp:latest
+docker run -p 5001:8080 ghcr.io/subhashyadavon/imdb-nlp:latest
 ```
