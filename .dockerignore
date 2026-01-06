@@ -1,0 +1,26 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.gitignore
+.DS_Store
+model/
+!model/vectorizer.pkl
+!model/clf.pkl
+# Exclude the large model folder if it contains training data, but ensure the pickled models are included. 
+# Based on file listing, model/ is a dir. Checking if it has other large files.
