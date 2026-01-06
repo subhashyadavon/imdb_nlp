@@ -1,4 +1,4 @@
-name: Deploy to Cloud Run
+name: Build and Push to GHCR
 
 on:
   push:
@@ -6,18 +6,14 @@ on:
       - main
 
 env:
-  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  REGION: us-central1
-  SERVICE_NAME: imdb-nlp
   IMAGE_NAME: imdb-nlp
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-      id-token: write
 
     steps:
       - name: Checkout code
@@ -38,20 +34,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
-
-      # 3. Authenticate to Google Cloud
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-
-      # 4. Deploy to Cloud Run
-      - name: Deploy to Cloud Run
-        uses: google-github-actions/deploy-cloudrun@v2
-        with:
-          service: ${{ env.SERVICE_NAME }}
-          region: ${{ env.REGION }}
-          image: ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
-          flags: '--allow-unauthenticated'
-          env_vars: |
-             NLTK_DATA=/app/nltk_data

@@ -45,6 +45,17 @@ python3 sentiment_analysis.py
 python3 app.py
 ```
 
+### 6. Running with Docker
+
+For detailed instructions on running with Docker locally or pulling from GHCR, please see **[RUN_APP.md](RUN_APP.md)**.
+
+Quick Start:
+```bash
+docker build -t imdb-nlp .
+docker run -p 5001:8080 imdb-nlp
+```
+
+
 
 
 
