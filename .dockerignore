@@ -19,8 +19,5 @@ coverage.xml
 .git
 .gitignore
 .DS_Store
-model/
-!model/vectorizer.pkl
-!model/clf.pkl
 # Exclude the large model folder if it contains training data, but ensure the pickled models are included. 
-# Based on file listing, model/ is a dir. Checking if it has other large files.
+# We remove the directory exclusion so the pickle files are picked up.
