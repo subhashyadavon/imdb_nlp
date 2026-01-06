@@ -1,5 +1,5 @@
 # Model files
-model/
+# model/ is intentionally tracked now for CI/CD
 # Python cache and bytecode
 __pycache__/
 # Virtual environments
