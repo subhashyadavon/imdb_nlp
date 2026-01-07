@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
 # Download necessary NLTK data during build
-RUN python -m nltk.downloader punkt stopwords
+RUN python -m nltk.downloader punkt stopwords punkt_tab
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
